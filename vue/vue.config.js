@@ -1,4 +1,6 @@
 module.exports = {
   outputDir: '../docs',
-  publicPath: '/CountDown'
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/CountDown/'
+    : '/'
 }
